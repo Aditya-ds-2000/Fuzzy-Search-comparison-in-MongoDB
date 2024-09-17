@@ -1,0 +1,20 @@
+{
+  "name": "mongoose-fuzzy-searching-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compare": "node scripts/compare.js",
+    "seed-db": "node scripts/seed-db.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.1",
+    "cli-table3": "^0.6.5",
+    "fuzzily-mongoose": "^1.0.8",
+    "mongoose": "^8.6.2",
+    "mongoose-fuzzy-searching": "^2.0.2"
+  }
+}
