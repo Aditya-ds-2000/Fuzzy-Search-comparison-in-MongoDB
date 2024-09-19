@@ -8,6 +8,8 @@ const Product = require('../schemas/ProductSchemaWithPredicates');
 (async () => {
     await connectToDB();
 
+    const totalDocuments = await Product.countDocuments();
+
     const { executionStats: execStats1 } = await Product
         .fuzzySearch(
             { query: 'soft' },
@@ -21,8 +23,8 @@ const Product = require('../schemas/ProductSchemaWithPredicates');
         ).explain();
 
     compareObjects(
-        execStats1,
-        execStats2,
+        Object.assign({ totalDocuments }, execStats1 ),
+        Object.assign({ totalDocuments }, execStats2),
         'With Equality Predicate',
         'Without Equality Predicate'
     );

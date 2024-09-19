@@ -7,7 +7,7 @@ const { connectToDB } = require('../helpers/db');
 const ProductOld = require('../schemas/ProductSchema');
 const Product = require('../schemas/ProductSchemaWithPredicates');
 
-const count = 10_000;
+const count = 100_000;
 
 (async () => {
     await connectToDB();
@@ -24,7 +24,7 @@ const count = 10_000;
     }), { count });
 
     await Product.collection.drop();
-    await ProductOld.collection.drop()
+    await ProductOld.collection.drop();
 
     console.log('cleared DB successfully!');
 
