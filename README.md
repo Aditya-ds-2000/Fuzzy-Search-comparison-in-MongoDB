@@ -22,4 +22,4 @@ npm run compare # logs a tabular comparison
 
 ![Output](assets/output.png)
 
-In terms of both the total documents scanned (59) and total keys scanned (155), the equality predicates approach is far more efficient than the other approach (2436 and 3663 respectively).
+In terms of both the total documents scanned (566) and total keys scanned (1739), the equality predicates approach is far more efficient than the other approach (24298 and 36854 respectively).
